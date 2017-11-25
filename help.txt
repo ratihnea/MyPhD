@@ -1,0 +1,4 @@
+1. Excel file format:
+	- Consist of two columns:1. max value and 2.simulation result
+	- This program can read 40 rows data
+2. Fuzzy type is: One Side and Two Side
