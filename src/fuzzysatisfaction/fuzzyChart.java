@@ -6,7 +6,11 @@
 package fuzzysatisfaction;
 
 import java.awt.Color;
+import java.awt.Desktop;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import static java.lang.Math.abs;
 import java.util.Scanner;
 import javax.swing.JFileChooser;
@@ -291,9 +295,14 @@ public class fuzzyChart extends javax.swing.JFrame {
     //private static final String FILE_NAME = "help.txt";
     private void jBtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHelpActionPerformed
         // TODO add your handling code here:
-//        File file = new File("help.txt");
-//        Scanner inputFile = new Scanner(file);
-//        file.setReadOnly();
+    if (Desktop.isDesktopSupported()) {
+        try {
+            File myFile = new File("help.txt");
+            Desktop.getDesktop().open(myFile);
+        } catch (IOException ex) {
+            // no application registered for PDFs
+        }
+    }
     }//GEN-LAST:event_jBtnHelpActionPerformed
 
     /**

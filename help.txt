@@ -2,3 +2,4 @@
 	- Consist of two columns:1. max value and 2.simulation result
 	- This program can read 40 rows data
 2. Fuzzy type is: One Side and Two Side
+3. To show the simulation result and fuzzy representation, choose the excel file of simulation result
