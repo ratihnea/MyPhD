@@ -315,14 +315,22 @@ public class fuzzyChart extends javax.swing.JFrame {
         final String series1 = "max";
         final String series2 = "simulation";
         final String series3 = "min";
+        int normal = 0;
         for(int i=0;i<chartData[0].length;i++){
-            ds.addValue(chartData[0][i], series1, String.valueOf(i));
-            ds.addValue(chartData[1][i], series2, String.valueOf(i));
+            
             String choice = jCBFuzzyType.getSelectedItem().toString();
-            if(choice == "One Side")
+            if(choice == "One Side"){
+                ds.addValue(chartData[0][i], series1, String.valueOf(i));
+                ds.addValue(chartData[1][i], series2, String.valueOf(i));
                 ds.addValue((chartData[0][i]-rv), series3, String.valueOf(i));
-            else
-                ds.addValue((chartData[0][i]-(2*rv)), series3, String.valueOf(i));
+            }
+            else{
+                normal = Integer.valueOf(jIdealTxt.getText());
+                //v = Integer.valueOf(jRelaxTxt.getText());
+                ds.addValue(normal+rv, series1, String.valueOf(i));
+                ds.addValue(chartData[1][i], series2, String.valueOf(i));
+                ds.addValue(normal-rv, series3, String.valueOf(i));
+            }
         }
         JFreeChart simchart = ChartFactory.createLineChart("Simulation Result", "Day", "Value", ds, PlotOrientation.VERTICAL, true, true, false);
         simchart.setBackgroundPaint(Color.white);
