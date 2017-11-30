@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="fuzzySatisfaction.jnlp">
+  <information>
+    <title>fuzzySatisfaction</title>
+    <vendor>ratih</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="fuzzySatisfaction.jar" size="14281" download="eager" />
+    <jar href="lib\commons-codec-1.10.jar" size="284184" download="eager" />
+    <jar href="lib\commons-collections4-4.1.jar" size="751238" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\hamcrest-core-1.3.jar" size="45024" download="eager" />
+    <jar href="lib\jcommon-1.0.23.jar" size="330246" download="eager" />
+    <jar href="lib\jfreechart-1.0.19-experimental.jar" size="13796" download="eager" />
+    <jar href="lib\jfreechart-1.0.19-swt.jar" size="79793" download="eager" />
+    <jar href="lib\jfreechart-1.0.19.jar" size="1570157" download="eager" />
+    <jar href="lib\jfreesvg-2.0.jar" size="50769" download="eager" />
+    <jar href="lib\junit-4.11.jar" size="245039" download="eager" />
+    <jar href="lib\junit-4.12.jar" size="314932" download="eager" />
+    <jar href="lib\log4j-1.2.17.jar" size="489884" download="eager" />
+    <jar href="lib\orsoncharts-1.4-eval-nofx.jar" size="445025" download="eager" />
+    <jar href="lib\orsonpdf-1.6-eval.jar" size="72444" download="eager" />
+    <jar href="lib\poi-3.17.jar" size="2701171" download="eager" />
+    <jar href="lib\poi-examples-3.17.jar" size="374509" download="eager" />
+    <jar href="lib\poi-excelant-3.17.jar" size="31218" download="eager" />
+    <jar href="lib\poi-ooxml-3.17.jar" size="1479023" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.17.jar" size="5924600" download="eager" />
+    <jar href="lib\poi-scratchpad-3.17.jar" size="1390360" download="eager" />
+    <jar href="lib\servlet.jar" size="80054" download="eager" />
+    <jar href="lib\swtgraphics2d.jar" size="17492" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="fuzzySatisfaction" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="fuzzysatisfaction.FuzzySatisfaction"  name="fuzzySatisfaction" />
+  <update check="always"/>
+</jnlp>
